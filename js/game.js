@@ -1,11 +1,13 @@
-function GameOfLife(canvasId) {
+function GameOfLife(canvas) {
   // Initialize the game board
-  this.canvas = document.getElementById(canvasId);
+  this.canvas = canvas;
+  
   this.context = this.canvas.getContext("2d");
   this.width = this.canvas.width;
   this.height = this.canvas.height;
   this.cellSize = 10;
   this.grid = [];
+  
   for (let i = 0; i < this.width / this.cellSize; i++) {
     this.grid[i] = [];
     for (let j = 0; j < this.height / this.cellSize; j++) {
@@ -28,24 +30,25 @@ GameOfLife.prototype.draw = function() {
   this.context.fillStyle = 'lightgray';
   this.context.fillRect(0, 0, this.width, this.height);
 
-
-
-
   const w = this.width;
   const h = this.height;
-
+  
+  
   this.context.strokeStyle = 'darkgray';
   this.context.shadowBlur = 0;
 
-  for (let i = 0; i <= this.width / this.cellSize; i++) {
+  //X-axis lines
+  for (let i = 0; i <= this.height / this.cellSize; i++) {
     this.context.beginPath();
     this.context.moveTo(0, i * this.cellSize);
     this.context.lineTo(this.width, i * this.cellSize);
     this.context.stroke();
   }
 
-  for (let j = 0; j <= this.height / this.cellSize; j++) {
+  //Y-axis
+  for (let j = 0; j <= this.width / this.cellSize; j++) {
     this.context.beginPath();
+    //console.log((j * this.cellSize));
     this.context.moveTo(j * this.cellSize, 0);
     this.context.lineTo(j * this.cellSize, this.height);
     this.context.stroke();

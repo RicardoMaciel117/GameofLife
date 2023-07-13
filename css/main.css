@@ -1,7 +1,4 @@
-canvas {
-  border: 1px solid black;
-}
-
 body{
   background-image: url("../images/back.png");
+  margin: 0;
 }
