@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Get client width to create an adjustable canvas
   const boardContainer = document.getElementById('gameContainer');
-  const board_width = boardContainer.clientWidth
-  const last_number = parseInt(board_width.toString().split("").pop());
+  const boardWidth = boardContainer.clientWidth
+  const lastNumber = parseInt(boardWidth.toString().split("").pop());
   
   
   /*
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
   * Cells width and height is: 10px
   */
   
-  if(last_number === 0){
-    canvas.width = board_width;
+  if(lastNumber === 0){
+    canvas.width = boardWidth;
   }
   else{
     // Center and set canvas width as multiple of 10
-    boardContainer.style.marginLeft = (last_number / 2)+"px";
-    canvas.width = board_width - (last_number - 1);
+    boardContainer.style.marginLeft = (lastNumber / 2)+"px";
+    canvas.width = boardWidth - (lastNumber - 1);
   }
   
   // Set canvas height as multiple of 10
@@ -42,16 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
 // Add event listener to the start/stop button to start and stop the game
 document.getElementById("startStopButton").addEventListener("click", function() {
   if (gameOfLife.isRunning()) {
     gameOfLife.stop();
-    this.innerHTML = "Start";
+    this.innerHTML = `
+      <span class="text">
+        <i class="fa fa-play"></i> Start
+      </span>
+    `;
   } else {
     gameOfLife.start();
-    this.innerHTML = "Stop";
+    this.innerHTML = `
+      <span class="text">
+        <i class="fa fa-stop"></i> Stop
+      </span>
+    `;
   }
 });
 

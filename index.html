@@ -3,14 +3,23 @@
 <head>
   <title>Conway's Game of Life</title>
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
 </head>
 <body>
     <nav>&nbsp;</nav>
   <div id="gameContainer"></div>
   
-  <br>
-  <button id="startStopButton">Start</button>
-  <button id="clearButton">Clear</button>
+  <div class="controls-container">
+    <button id="startStopButton" class="controls-game">
+      <span class="text">
+        <i class="fa fa-play"></i>
+        Start
+      </span>
+    </button>&nbsp;
+    <button id="clearButton" class="controls-game"><span class="text">Clear</span></button>&nbsp;
+    <button class="controls-game" role="button"><span class="text">Info</span></button>
+  </div>
 
   
   <script type="text/javascript" src="js/board.js"></script>

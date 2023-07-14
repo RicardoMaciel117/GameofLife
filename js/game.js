@@ -90,12 +90,14 @@ GameOfLife.prototype.start = function() {
     self.draw();
   }, 1000 / this.fps);
   this.running = true;
+  this.canvas.classList.add('active-game');
 };
 
 GameOfLife.prototype.stop = function() {
   // Stop the game loop
   clearInterval(this.intervalId);
   this.running = false;
+  this.canvas.classList.remove('active-game');
 };
 
 GameOfLife.prototype.isRunning = function() {
