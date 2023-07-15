@@ -1,20 +1,68 @@
+body{
+  /*
+  background-image: url("../images/back.png");
+  */
+  font-family: 'SF Intermosaic', Phantomsans;
+  background: #2b2b2b;
+  margin: 0;
+}
+
+/*Start Nav styles*/
+.navbar{
+  background-color: #07dfe3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  margin-bottom:  9px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  font-size: 30px;
+}
+
+.nav-title{
+  color: white;
+  text-shadow: 0px 2px 4px #2b2b2b;
+  box-shadow: 0px 2px 3px 2px blueviolet;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+}
+
+.info-section{
+  display: inline-block;
+  color: #2b2b2b;
+  
+}
+
+.info-section a{
+  text-decoration: none;
+  color: #2b2b2b;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 25px;
+  border-right: 2px dashed #4a4a4a;
+}
+/*End Nav styles*/
+
+/*Start Board styles*/
 .active-game{
   box-shadow: 0 0 3px 4px #0450d1;
-  animation: mymove 3s infinite;
+  animation: active 3s infinite;
 	border-radius: 2px;
 }
 
-@keyframes mymove {
+@keyframes active {
   50% {box-shadow: 0 0 7px 4px #07dfe3;}
 }
+/*End Board styles*/
 
+/*Start Controls styles*/
 .controls-container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .controls-game {
   align-items: center;
@@ -25,8 +73,8 @@
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;
-  font-family: Phantomsans, sans-serif;
   font-size: 1.5em;
+  font-family: 'SF Intermosaic', Phantomsans;
   justify-content: center;
   max-width: 100%;
   padding: 3px;
@@ -55,13 +103,4 @@
 .controls-game:hover span {
   background: none;
 }
-
-
-
-body{
-  /*
-  background-image: url("../images/back.png");
-  */
-  background: #2b2b2b;
-  margin: 0;
-}
+/*Start Controls styles*/
