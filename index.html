@@ -3,9 +3,12 @@
 <head>
   <title>Conway's Game of Life</title>
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/modal.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.cdnfonts.com/css/sf-intermosaic" rel="stylesheet">
   <meta charset="utf-8" />
+  
+  <link rel="shortcut icon" href=images/favicon.png type="image/png">
 </head>
 <body>
     <nav class="navbar">
@@ -31,12 +34,109 @@
       </span>
     </button>&nbsp;
     <button id="clearButton" class="controls-game"><span class="text">Clear</span></button>&nbsp;
-    <button class="controls-game" role="button"><span class="text">Info</span></button>
+    <button id="myBtn" class="controls-game" role="button"><span class="text">Info</span></button>
   </div>
 
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <p>
+        <br>
+        Conway's Game of Life is a cellular automaton, which is a type of mathematical model that consists of a grid of cells that can be in one of two states, alive or dead.  The game is played on a 2D square grid, where each square or "cell" can be either alive or dead, and they evolve according to the following rules:
+        <ul>
+          <li>Any live cell with fewer than two live neighbors dies (referred to as underpopulation).</li>
+          <li>Any live cell with more than three live neighbors dies (referred to as overpopulation).</li>
+          <li>Any live cell with two or three live neighbors lives, unchanged, to the next generation.</li>
+          <li>Any dead cell with exactly three live neighbors comes to life.</li>
+        </ul>
+      </p>
+      <div class="more-info">
+        <button>Some examples</button>
+        
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="images/examples/1.png">
+            <p>Description 1</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/examples/2.png">
+            <p>Description 2</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/examples/3.png">
+            <p>Description 3</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/examples/4.png">
+            <p>Description 4</p>
+          </div>
+          <a class="carousel-control prev">&#10094;</a>
+          <a class="carousel-control next">&#10095;</a>
+        </div>
+        
+        <!--div id="examples" class="examples-container">
+          
+          <div>
+            <h3>Heli</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Implosion</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Cubes</h3>
+            <button>Try</button>
+          </div>
+          
+          
+          <div>
+            <h3>Heli</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Implosion</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Cubes</h3>
+            <button>Try</button>
+          </div>
+          
+          
+          <div>
+            <h3>Heli</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Implosion</h3>
+            <button>Try</button>
+          </div>
+          
+          <div>
+            <h3>Cubes</h3>
+            <button>Try</button>
+          </div>
+          
+          
+        </div-->
+      </div>
+      
+    </div>
+  </div>
   
   <script type="text/javascript" src="js/board.js"></script>
   <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/carousel.js"></script>
+  
   
 </body>
 </html>
